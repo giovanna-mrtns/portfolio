@@ -1,0 +1,121 @@
+body, .main {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+    transition: 0.5s;
+;
+}
+body {
+    font-family: ;
+    font-weight: 500;
+    background-color: #fafafa;
+    
+    opacity: 1; 
+    align-items: center;
+    display: flex;
+    flex-direction: column;    
+}
+section {
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: none;
+    scroll-snap-stop: always;
+    flex-direction: column;
+}
+#navbar {
+    display: flex;
+    flex-direction: row; 
+    gap: 150px;
+    padding: 10px;
+    width: 100%;
+    justify-content: center;
+    background-color: #1C1D21;
+}
+.botoes-nav {
+    background-color: #ebcab0;
+    padding: 12px;
+    padding-left: 18px;
+    padding-right: 18px;
+    color: #1C1D21;
+}
+li {
+    list-style: none;
+    flex-direction: row;
+}
+
+
+.main {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+#intro {
+ background: linear-gradient(90deg, #27282e, #27222C, #392735);
+      background-size: 300% 300%;
+      animation: gradient 5s alternate infinite;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    flex-direction: row;
+}
+    @keyframes gradient {
+      0% {
+        background-position: 0%;
+      }
+      100% {
+        background-position: 100%;
+      }
+    }
+
+#nome {
+    flex-direction: column;
+      
+    }
+
+
+
+.texto {
+    width: 50%;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: "gfs neohellenic", serif;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    color: #56555a;
+}
+#resumo {
+    font-family: "gfs neohellenic", serif;
+    font-size: 20px;
+    color: #9aa0a4;
+    width: 50%;
+    text-align: justify;
+}
+h2 {
+    font-family: "Onest", sans-serif;
+    font-size: 32px;
+    color: #dee3e6;
+}
+h3 {
+    font-family: "Onest", sans-serif;
+    font-size: 25px;
+    color: #1C1D21;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #1C1D21;
+}
