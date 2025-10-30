@@ -15,7 +15,7 @@
     <nav class="navbar">
         <ul>
             <li>
-                <button class="botoes-nav" id="home">
+                <button class="botoes-nav">
                     <a href="#intro" class="nav-link">Home</a>
                 </button>
             </li>
@@ -38,6 +38,7 @@
     </nav>
     
     <section id="intro">
+        <div id="intro-container">
         <div id="main">
             <div id="nome">
                 <span>
@@ -45,7 +46,7 @@
                 </span>
                 <p id="resumo">Estudante de Sistemas de Informação, com foco em Desenvolvimento Web</p>
                 <div id="navbar-secundaria">
-                    <a href="#projetos" class="botao-secundario" style="color: var(--cor-secundaria); background-color: #ffffff;">Ver projetos</a>
+                    <a href="#projetos" class="botao-secundario" style="color: var(--cor-primaria); background-color: #ffffff;">Ver projetos</a>
                     <a href="#contato" class="botao-secundario" >Entrar em contato</a>
                 </div>
                 <div id="sociais">
@@ -59,11 +60,22 @@
                 
             </div>
         </div>
+        <div id="foto-intro"><img id="foto" src="imgs/giovanna-foto.jpg" alt="Foto da Giovanna" width="350px"></div>
+        
+    </div>
+    <div id="scroll-indicador">
+        <a href="#sobre"><i class='bx  bx-caret-down'></i></a>
+    </div>
+     
     </section>
     
     <section id="sobre" class="esconder">
+        <h2>Sobre Mim</h2>
+        <div class="divisoria"></div>
+        <div class="sobre-container">
+            
         <div id="sobre-mim">
-            <h2 class="titulo">Sobre Mim</h2>
+            
             <p class="texto">                
             Sou uma estudante de Sistemas de Informação apaixonada por tecnologia, com foco especial em desenvolvimento web. Estou em constante evolução, sempre buscando aprender novas tecnologias e aprimorar minhas habilidades.
             <br>
@@ -71,28 +83,45 @@
             
             <div class="grid">
                 <div class="box-sobre">
-                    
-                    <h4>Educação:</h4>
+                    <i class='bx  bx-book-bookmark'  ></i> 
+                    <h5>Educação:</h5>
                     <p class="texto">Cursando Sistemas de Informação na UNIDESC, com previsão de conclusão em 2027.</p>
                 </div>
                 <div class="box-sobre">
-                    <h4>Idade:</h4>
+                    <i class='bx  bx-calendar-alt'  ></i> 
+                    <h5>Idade:</h5>
                     <p class="texto">21 anos</p>
                 </div>
                 <div class="box-sobre">
-                    <h4>Localização:</h4>
+                    <i class='bx  bx-pin'  ></i> 
+                    <h5>Localização:</h5>
                     <p class="texto">Cidade Ocidental - GO</p>
                 </div>
+                
+            </div>
+            
+        </div>
+        
+        </div>
+        <div id="experiencia">
+            <h3>Experiência</h3>
+            <div class="box-experiencia">
+                
             </div>
         </div>
-        <h3>Experiência</h3>
-        <div class="experiencia"></div>
+        
     </section>
 
     <section id="habilidades" class="esconder">
         <h2>Habilidades</h2>
-        <div id="habilidades-container">
+        <div class="divisoria"></div>
+        <div class=""></div>
+        <p class="texto">Tecnologias e ferramentas que utilizo no meu dia a dia</p>
+
+        
+        <div id="minhas-habilidades">
             <div class="box-habilidades">
+                <i class="bx bxl-html5"></i>
                 <h3>HTML5</h3>
                 <p class="descricao">Conhecimento em estruturação de páginas web utilizando HTML5.</p>
                 <div class="nivel-habilidade">
@@ -102,6 +131,7 @@
                 80%</div>
             </div>
             <div class="box-habilidades">
+                <i class="bx bxl-css3"></i>
                 <h3>CSS</h3>
                 <p class="descricao">Habilidade em estilização de páginas web com CSS3.</p>
                 <div class="nivel-habilidade">
@@ -111,6 +141,7 @@
                 60%</div>
             </div>
             <div class="box-habilidades">
+                <i class="bx bxl-javascript"></i>
                 <h3>JavaScript</h3>
                 <p class="descricao">Experiência em programação front-end com JavaScript.</p>
                 <div class="nivel-habilidade">
@@ -120,15 +151,18 @@
                 40%</div>
             </div>
             <div class="box-habilidades">
+                <i class="bx bxl-java"></i>
                 <h3>Java</h3>
                 <p class="descricao">Conhecimento em programação orientada a objetos com Java.</p>
                 <div class="nivel-habilidade">
                 <div class="barra-progresso">
                     <div class="progresso-nivel" style="width: 40%;"></div>
                 </div> 
-                40%</div>
+                    40%
+                </div>
             </div>
             <div class="box-habilidades">
+                <i class="bx bxl-python"></i>
                 <h3>Python</h3>
                 <p class="descricao">Automação de tarefas, análise de dados e desenvolvimento de scripts simples.</p>
             <div class="nivel-habilidade">
@@ -138,6 +172,7 @@
                 40%</div>
             </div>
             <div class="box-habilidades">
+                <i class="bx bx-data"></i>
                 <h3>SQL</h3>
                 <p class="descricao">Manipulação e consulta de bancos de dados relacionais.</p>
             <div class="nivel-habilidade">
@@ -147,6 +182,7 @@
                 50%</div>
             </div>
             <div class="box-habilidades">
+                <i class='bx  bx-git-repo-forked'  ></i> 
                 <h3>Git</h3>
                 <p class="descricao">Experiência com controle de versão utilizando Git.</p>
             <div class="nivel-habilidade">
@@ -155,6 +191,18 @@
                 </div> 
                 40%</div>
             </div>
+        </div>
+    </section>
+    <section id="projetos">
+        <div class="projetos-container">
+        <div class="box-projetos">
+
+
+            
+        </div>
+
+        
+
         </div>
     </section>
 </body>

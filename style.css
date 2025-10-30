@@ -4,8 +4,9 @@
     --cor-texto: #777593;
     --cor-texto-claro: #ffffff;
     --cor-fundo: #f3f3f3;
+    --cor-fundo-2: #fff;
     --cor-branca: #ffffff;
-    --gradiente: linear-gradient(135deg, #b7e1d0 0%, #75eaea 100%);
+    --gradiente: linear-gradient(90deg, #b7e1d0 0%, #75eaea 100%);
     --sombra: 0 5px 15px rgba(0,0,0,0.1);
 }
 
@@ -32,36 +33,57 @@ body {
 
 /* sections */
 section {
-  min-height: 75vh;
+  
   width: 100%;
     display: flex;
     align-items: center;
-    padding: 100px 0px;
+    padding: 100px 0;
+  
 }
 
 #intro {
-  background-image: linear-gradient(135deg, rgb(191, 233, 193) 0%, rgb(191, 233, 193) 1%,rgb(194, 206, 183) 1%, rgb(194, 206, 183) 56%,rgb(197, 180, 173) 56%, rgb(197, 180, 173) 75%,rgb(201, 153, 163) 75%, rgb(201, 153, 163) 80%,rgb(204, 126, 152) 80%, rgb(204, 126, 152) 87%,rgb(207, 100, 142) 87%, rgb(207, 100, 142) 97%,rgb(210, 73, 132) 97%, rgb(210, 73, 132) 100%);
-  flex-direction: row;
+  background-image: linear-gradient(135deg, #bfe9c1 0%, #bfe9c1 1%,#c2ceb7 1%, #c2ceb7 56%,lab(74.53% 4.87 5.75) 56%, #c5b4ad 75%,#c999a3 75%, #c999a3 80%,#cc7f99 80%, #cc7e98 87%,#cf648e 87%, rgb(207, 100, 142) 97%,#d24984 97%, #d24984 100%);
+  flex-direction: column;
   overflow: hidden;
+  min-height: 70vh;
 
+}
+
+#intro-container {
+  display: flex;
+  flex-direction: row;
+}
+
+intro i {
+wi
 }
 
 #sobre {
-  flex-direction: row;
+  flex-direction: column;
   padding: 80px 0;
-  background-color: var(--cor-fundo);
+  background-color: transparent;
+  width: 90%;
 }
 
 #habilidades  {
+  flex-direction: column;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  
+}
+
+#projetos {
   flex-direction: column;
 }
 
 /* navbar */
 .navbar {
   display: flex;
-  padding: 10px;
-  width: 100%;
-  justify-content: flex-end;
+  padding: 8px;
+  margin-top: 15px;
+  width: 50%;
+  border-radius: 50px;
+  justify-content: center;
   gap: 40px;
   position: fixed;
   top: 0;
@@ -69,6 +91,12 @@ section {
   transition: background-color 0.1s linear;
   animation: nav 0.5s ease forwards;
   z-index: 9999;
+}
+
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.26);
+  backdrop-filter: blur(10px);
+  transition: 0.8s ease;
 }
 
 .navbar ul {
@@ -84,26 +112,60 @@ section {
   flex-direction: row;
 }
 
+.navbar-secundaria:hover {
+}
+
+#home {}
+
 li {
   list-style: none;
 }
 
 /* classes e ids */
+
+.titulo {
+  background: var(--gradiente);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.divisoria {
+  height: 5px;
+  width: 100px;
+  border-radius: 10px;
+  background: var(--gradiente);
+}
+
+
 #nome {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: left;
   text-align: left;
-  gap: 20px;
+  gap: 25px;
   padding: 40px;
   animation: intro 2s ease forwards;
   max-width: 600px;
 }
 
+
+
+#foto-intro {
+  padding-right: 50px;
+  align-content: center;
+  justify-content: center;
+  
+}
+
+#foto {
+  border-radius: 200px;
+}
+
 .texto {
-  width: 100%;
+  
   text-align: justify;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.5;
   font-family: "GFS Neohellenic", serif;
   font-weight: 400;
@@ -118,43 +180,131 @@ li {
   
 }
 
-#sobre-mim {
-  background-color: transparent;
-  flex-direction: column;
-  width: 60%;
-  max-width: 1200px;
-  padding: 40px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#scroll-indicador {
+  background: var(--cor-primaria); 
+  font-size: 35px;
+  animation: bounce 2s infinite;
+  background: var(--cor-branca);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
+/* seção sobre */
+.sobre-container {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+}
+
+.sobre-mim {
+  flex-direction: row;
+  width: ;
+
+}
+
+.sobre-conteudo {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: flex-start;
+    margin-bottom: 60px;
+}
+
+.sobre-texto {
+    flex: 2;
+}
+
+.sobre-imagem {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.imagem-container {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    background: var(--gradiente);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 100px;
+}
+
+.imagem-placeholder i {
+    opacity: 0.7;
+}
 
 .grid {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 10px;
-  width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    
 }
 
 .box-sobre {
-  display: flex;
-  flex-direction: column;
-  line-height: 0%;
-  align-items: flex-start;
-  padding: 2%;
-  background: var(--cor-secundaria);
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-.box-sobre:hover {
-  transform: translatex(5px);
-  
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    background: var(--cor-secundaria);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    
 }
 
-#habilidades-container {
+
+.box-sobre i {
+    font-size: 30px;
+    background: var(--gradiente);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.box-sobre:hover {
+    transform: translatex(5px);
+    transition: transform 0.2s ease;
+}
+
+/* experiência */
+
+#experiencia {
+width: ;
+}
+
+.box-experiencia {
+  background-color: #75eaea;
+}
+
+/* habilidades */
+
+.subtitulo {
+    font-size: 18px;
+    color: var(--cor-texto);
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#minhas-habilidades {
   display: flex;
   flex-direction: row;
   gap: 25px;
@@ -162,7 +312,6 @@ li {
   max-width: 1200px;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 40px;
 }
 
 .box-habilidades {
@@ -170,6 +319,7 @@ li {
   font-size: 20px;
   font-weight: 500;
   justify-content: center;
+  text-align: center;
   background-color: var(--cor-branca);
   flex-direction: column;
   width: 350px;
@@ -178,7 +328,7 @@ li {
   border-radius: 15px;
   display: flex;
   box-sizing: border-box;
-  transition: transform 0.2s;
+  transition: 0.2s;
   box-shadow: var(--sombra);
 }
 
@@ -186,6 +336,27 @@ li {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
+
+.box-habilidades i {
+  font-size: 40px;
+  background: var(--gradiente);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.habilidade-cabecalho {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.habilidade-cabecalho i {
+    font-size: 30px;
+    color: var(--cor-texto);
+}
+
 .nivel-habilidade {
   display: flex;
   align-items: center;
@@ -206,11 +377,34 @@ li {
   background: var(--gradiente);
 }
 
+.porcentagem {
+    font-weight: bold;
+    color: var(--cor-texto);
+    min-width: 40px;
+}
+
 .descricao {
   font-size: 18px;
   line-height: 1.5;
   color: var(--cor-texto);
   margin-top: 10px;
+}
+
+/* projetos */
+
+.projetos-container {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  width: 90%;
+  max-width: 1200px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.box-projetos {
+  
 }
 
 h1 {
@@ -228,17 +422,18 @@ h2 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 h3 {
   font-family: "GFS Neohellenic", serif;
   font-weight: 700;
   font-size: 26px;
-  background: var(--gradiente);
+  background: var(--cor-texto);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin-bottom: 1rem;
+ 
 }
 
 h4 {
@@ -246,7 +441,14 @@ h4 {
   font-weight: 600;
   font-size: 22px;
   color: var(--cor-texto);
-  margin-bottom: 10px;
+
+}
+
+h5 {
+  font-family: "GFS Neohellenic", serif;
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--cor-texto);
 }
 
 .botoes-nav {
@@ -259,10 +461,6 @@ h4 {
   color: var(--cor-texto);
   cursor: pointer;
   transition: all 0.2s;
-}
-
-.botoes-nav:focus {
-  background-color: #624a47;
 }
 
 .botao-secundario {
@@ -280,7 +478,9 @@ h4 {
 
 .botao-secundario:hover {
   background-color: #fff;
-  transform: scale(1.1);
+  color: var(--cor-primaria);
+  transition: 0.2s ease-out;
+  transform: translateY(1.05);
 }
 
 button {
@@ -296,8 +496,16 @@ button {
   border-radius: 8px;
   transition: 0.2s ease-out;
   transform: scale(1.05);
-  text-decoration: underline var(--cor-primaria);
-  background-color: rgba(241, 227, 228, 0.1);
+  text-decoration:underline;
+  
+}
+
+.nav-link {
+  text-decoration: none;
+    color: var(--cor-primaria);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
 }
 
 a {
@@ -316,10 +524,7 @@ a {
 
 .icone-social:hover {
   transform: scale(1.1);
-  
 }
-
-
 
 /* animações */
 @keyframes intro {
@@ -343,7 +548,6 @@ a {
     transform: translateY(0);
   }
 }
-
 
 /* efeitos */
 .esconder {
@@ -375,7 +579,6 @@ a {
   
   h2 {
     font-size: 32px;
-    
   }
   
   #nome {
@@ -383,9 +586,39 @@ a {
     margin: 0 20px;
   }
   
-  #sobre-mim {
-    width: 90%;
-    padding: 20px;
+  .sobre-conteudo {
+    flex-direction: column;
+  }
+  
+  .sobre-imagem {
+    order: -1;
+    margin-bottom: 30px;
+  }
+  
+  .imagem-container {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .grid {
+    flex-direction: column;
+  }
+  
+  .timeline::before {
+    left: 20px;
+  }
+  
+  .timeline-item {
+    padding-left: 60px;
+  }
+  
+  .timeline-data {
+    width: 40px;
+    font-size: 12px;
+  }
+  
+  .habilidade-cabecalho {
+    justify-content: center;
   }
   
   #habilidades-container {
@@ -402,12 +635,7 @@ a {
   }
 }
 
-.titulo {
-  background: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
+
 
 @media (max-width: 480px) {
   .navbar ul {
@@ -430,4 +658,16 @@ a {
   #nome {
     padding: 20px;
   }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
 }
