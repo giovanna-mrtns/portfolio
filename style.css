@@ -49,7 +49,7 @@ section {
   align-items: center;
   flex-direction: column;
   overflow: hidden;
-  min-height: 80vh;
+  min-height: 90vh;
 background: var(--cor-primaria)
 }
 
@@ -61,8 +61,6 @@ background: var(--cor-primaria)
   margin: 50px;
 }
 
-intro i {
-}
 
 #sobre {
   flex-direction: column;
@@ -96,7 +94,7 @@ intro i {
   display: flex;
   padding: 8px;
   margin-top: 15px;
-  width: 80%;
+  width: 90%;
   border-radius: 50px;
   justify-content: center;
   gap: 40px;
@@ -159,8 +157,7 @@ li {
 
 
 .box-experiencia {
-  display: flex
-  flex-direction: row;
+
   font-family: "GFS Neohellenic", serif;
   font-size: 20px;
   font-weight: 500;
@@ -867,36 +864,7 @@ a {
     margin: 0;
 }
 
-/* responsividade para o formulário */
-@media (max-width: 768px) {
-    .campo-grupo {
-        flex-direction: column;
-        gap: 0;
-    }
-    
-    .formulario {
-        padding: 25px;
-    }
-    
-    #form-contato {
-        margin-top: 30px;
-    }
-    
-    #form-contato h3 {
-        font-size: 24px;
-    }
-}
 
-@media (max-width: 480px) {
-    .formulario {
-        padding: 20px;
-    }
-    
-    .botao-enviar {
-        padding: 12px 20px;
-        font-size: 16px;
-    }
-}
 
 
 /* animações */
@@ -951,31 +919,6 @@ a {
   transform: translateY(0);
 }
 
-
-
-@media (max-width: 480px) {
-  .navbar ul {
-    gap: 10px;
-  }
-  
-  .botoes-nav {
-    font-size: 14px;
-    padding: 8px 12px;
-  }
-  
-  h1 {
-    font-size: 28px;
-  }
-  
-  h2 {
-    font-size: 24px;
-  }
-  
-  #nome {
-    padding: 20px;
-  }
-}
-
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateX(-50%) translateY(0);
@@ -986,4 +929,226 @@ a {
     60% {
         transform: translateX(-50%) translateY(-5px);
     }
+}
+
+/*responsividade */
+
+@media screen and (max-width: 1050px) {
+
+  
+#intro {
+  min-height: 100vh;
+}
+
+#foto {
+  width: 300px;
+}
+
+#main {
+  width: 100%;
+}
+
+  #intro-container {
+    flex-direction: row;
+    margin: 0;
+    width: 90%;
+  }
+
+
+}
+
+
+@media screen and (max-width: 950px) {
+  .navbar ul{
+    gap: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .botoes-nav {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 820px) {
+#intro {
+  min-height: 100vh;
+}
+
+#foto {
+  width: 250px;
+}
+
+#main {
+  width: 100%;
+}
+
+  #intro-container {
+    flex-direction: row;
+    margin: 0;
+    width: 90%;
+  }
+
+  #experiencia-container {
+    gap: 0;
+  }
+
+  .box-experiencia {
+    width: 250px;
+  }
+
+}
+
+@media screen and (max-width: 760px) {
+
+#intro {
+  text-align: center;
+  min-height: 120vh;
+}
+#introducao {
+  text-align: center;
+}
+
+#foto-intro {
+  padding: 0;
+  text-align: center;
+}
+
+#sociais {
+  justify-content: center;
+}
+
+#foto {
+  width: 300px;
+}
+
+#intro-container {
+    flex-direction: column;
+    margin: 0;
+    width: 90%;
+    justify-content: center;
+}
+
+.campo-grupo {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .formulario {
+        padding: 25px;
+        
+    }
+    
+    #form-contato {
+        margin-top: 30px;
+        width: 80%;
+    }
+    
+    #form-contato h3 {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 610px) {
+  #intro {
+    min-height: 150vh;
+  }
+.navbar {
+  display: none;
+}
+
+  .navbar-ul {
+    gap: 10px;
+    padding: 0;
+    flex-shrink: 1;
+
+  }
+
+  .botoes-nav {
+    padding: 0;
+    
+  }
+
+  .nav-link {
+    font-size: 15px;
+  }
+
+   .box-experiencia {
+    width: 200px;
+  }
+
+  .texto {
+    max-width: 80%;
+  }
+
+  #contato-container {
+    max-width: 80%;
+
+  }
+  .informações-contato h6 {
+    font-size: 20px;
+  }
+  .informações-contato p{
+    font-size: 15px;
+  }
+}
+
+
+
+@media screen and (max-width: 520px) {
+    .navbar-ul {
+    gap: 0px;
+    padding: 0;
+
+  }
+
+  .botoes-nav {
+    padding: 0;
+    
+  }
+
+  .nav-link {
+    font-size: 15px;
+  }
+  
+    .formulario {
+        padding: 20px;
+    }
+    
+    .botao-enviar {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+
+    .box-experiencia {
+    width: 150px;
+  }
+  }
+  
+  @media screen and (max-width: 550px) {
+  .navbar ul{
+    flex-direction: 0;
+  }
+
+  .botoes-nav {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  #intro {
+    min-height: 180vh;
+  }
+  #navbar-secundaria {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+  .botao-secundario {
+    font-size: 15px;
+        padding: 8px 15px;
+  }
+     .box-experiencia {
+    width: 120px;
+  }
 }
